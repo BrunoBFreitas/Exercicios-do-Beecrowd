@@ -1,0 +1,14 @@
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\bin\Debug\net9.0\Iniciante_2.exe
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\bin\Debug\net9.0\Iniciante_2.deps.json
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\bin\Debug\net9.0\Iniciante_2.runtimeconfig.json
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\bin\Debug\net9.0\Iniciante_2.dll
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\bin\Debug\net9.0\Iniciante_2.pdb
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\obj\Debug\net9.0\Iniciante_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\obj\Debug\net9.0\Iniciante_2.AssemblyInfoInputs.cache
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\obj\Debug\net9.0\Iniciante_2.AssemblyInfo.cs
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\obj\Debug\net9.0\Iniciante_2.csproj.CoreCompileInputs.cache
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\obj\Debug\net9.0\Iniciante_2.dll
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\obj\Debug\net9.0\refint\Iniciante_2.dll
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\obj\Debug\net9.0\Iniciante_2.pdb
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\obj\Debug\net9.0\Iniciante_2.genruntimeconfig.cache
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\obj\Debug\net9.0\ref\Iniciante_2.dll
