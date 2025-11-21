@@ -12,3 +12,4 @@ C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\obj\Debug\net9.0\r
 C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\obj\Debug\net9.0\Iniciante_2.pdb
 C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\obj\Debug\net9.0\Iniciante_2.genruntimeconfig.cache
 C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\obj\Debug\net9.0\ref\Iniciante_2.dll
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_2\obj\Debug\net9.0\Iniciante_2.sourcelink.json

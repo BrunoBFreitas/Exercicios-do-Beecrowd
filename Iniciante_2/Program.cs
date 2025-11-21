@@ -100,15 +100,79 @@ public class Iniciante_2
 
         foreach (int numero in numeros)
             Console.WriteLine(numero);
-        */
 
         // BEE 1043 ==============================================================================================
+        string[] lados = Console.ReadLine().Split(' ');
+        double A = double.Parse(lados[0]);
+        double B = double.Parse(lados[1]);
+        double C = double.Parse(lados[2]);
+
+        if (A + B > C && A + C > B && B + C > A)
+        {
+            Console.WriteLine($"Perimetro = {A + B + C:F1}");
+        }
+        else
+        {
+            Console.WriteLine($"Area = {((A + B) * C) / 2:F1}");
+        }
 
         // BEE 1044 ==============================================================================================
+        string[] numeros = Console.ReadLine().Split(' ');
+        int A = int.Parse(numeros[0]);
+        int B = int.Parse(numeros[1]);
+
+        if (A % B == 0 || B % A == 0)
+            Console.WriteLine("Sao Multiplos");
+        else
+            Console.WriteLine("Nao sao Multiplos");
 
         // BEE 1045 ==============================================================================================
+        string[] leitura = Console.ReadLine().Split(' ');
+        double[] lados = new double[] { double.Parse(leitura[0]), double.Parse(leitura[1]), double.Parse(leitura[2]) };
+
+        // Ordenando os lados
+        for (int i = 0; i < 3; i++)
+            for (int j = i + 1; j < 3; j++)
+                if (lados[j] > lados[i])
+                {
+                    double temporario = lados[j];
+                    lados[j] = lados[i];
+                    lados[i] = temporario;
+                }
+
+        if (lados[0] >= lados[1] + lados[2])
+        {
+            Console.WriteLine("NAO FORMA TRIANGULO");
+        }
+        else
+        {
+            double ladoA2 = lados[0] * lados[0];
+            double ladoBplusC2 = lados[1] * lados[1] + lados[2] * lados[2];
+
+            if (ladoA2 == ladoBplusC2)
+                Console.WriteLine("TRIANGULO RETANGULO");
+            else if (ladoA2 > ladoBplusC2)
+                Console.WriteLine("TRIANGULO OBTUSANGULO");
+            else if (ladoA2 < ladoBplusC2)
+                Console.WriteLine("TRIANGULO ACUTANGULO");
+
+
+            if (lados[0] == lados[1] && lados[0] == lados[2])
+                Console.WriteLine("TRIANGULO EQUILATERO");
+            else if (lados[0] == lados[1] || lados[0] == lados[2] || lados[1] == lados[2])
+                Console.WriteLine("TRIANGULO ISOSCELES");
+        }
 
         // BEE 1046 ==============================================================================================
+        string[] entrada = Console.ReadLine().Split(' ');
+        int ini = int.Parse(entrada[0]);
+        int fim = int.Parse(entrada[1]);
+
+        if (fim == ini)
+            Console.WriteLine($"O JOGO DUROU 24 HORA(S)");
+        else
+            Console.WriteLine($"O JOGO DUROU {(fim < ini ? 24 : 0) + fim - ini} HORA(S)");
+        */
 
         // BEE 1047 ==============================================================================================
 
