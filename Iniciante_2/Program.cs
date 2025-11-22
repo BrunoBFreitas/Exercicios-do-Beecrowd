@@ -172,13 +172,156 @@ public class Iniciante_2
             Console.WriteLine($"O JOGO DUROU 24 HORA(S)");
         else
             Console.WriteLine($"O JOGO DUROU {(fim < ini ? 24 : 0) + fim - ini} HORA(S)");
-        */
 
-        // BEE 1047 ==============================================================================================
+        // BEE 1047 ERRO==============================================================================================
+        //************************************************************************************************************
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        string[] entrada = Console.ReadLine().Split(' ');
+        int horaIni = int.Parse(entrada[0]);
+        int minIni = int.Parse(entrada[1]);
+
+        int horaFim = int.Parse(entrada[2]);
+        int minFim = int.Parse(entrada[3]);
+
+
+        // h_ini < h_fim => fim - ini
+        // h_ini > h_fim => 24 - ini + fim
+        // h_ini = h_fim && m_ini = m_fim => 24
+        // m_ini < m_fim => fim - ini
+        // m_ini > m_fim => 60 - ini + fim
+        // m_ini = m_fim => 0
+
+        int horas = 0;
+        int minutos = 0;
+
+        if (horaIni < horaFim)
+            horas = horaFim - horaIni;
+        else if (horaIni > horaFim)
+            horas = 24 - horaIni + horaFim;
+        else if (horaFim == horaIni && minFim == minIni)
+            horas = 24;
+
+        if (minIni < minFim)
+            minutos = minFim - minIni;
+        else if (minIni > minFim)
+        {
+            minutos = 60 - minIni + minFim;
+            horas--;
+        }
+        else
+            minutos = 0; 
+
+
+        if (horaIni < horaFim)
+        {
+            horas = horaFim - horaIni;
+            if (minIni < minFim)
+            {
+                minutos = minFim - minIni;
+            }
+            else if (minIni > minFim)
+            {
+                horas--;
+                minutos = 60 - minFim + minIni;
+            }
+            else
+            {
+
+            }
+        }
+        else if (horaIni > horaFim)
+        {
+            if (minIni < minFim)
+            {
+
+            }
+            else if (minIni > minFim)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+        else
+        {
+            if (minIni < minFim)
+            {
+
+            }
+            else if (minIni > minFim)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+
+        Console.WriteLine($"O JOGO DUROU {horas} HORA(S) E {minutos} MINUTO(S)");
 
         // BEE 1048 ==============================================================================================
+        double salario = double.Parse(Console.ReadLine());
+        double reajuste;
+
+        if (salario <= 400.00)
+            reajuste = 0.15;
+        else if (salario <= 800.00)
+            reajuste = 0.12;
+        else if (salario <= 1200.00)
+            reajuste = 0.10;
+        else if (salario <= 2000.00)
+            reajuste = 0.07;
+        else
+            reajuste = 0.04;
+
+        Console.WriteLine($"Novo salario: {salario * (1 + reajuste):F2}");
+        Console.WriteLine($"Reajuste ganho: {salario * reajuste:F2}");
+        Console.WriteLine($"Em percentual: {reajuste * 100:F0} %");
 
         // BEE 1049 ==============================================================================================
+        string palavra1 = Console.ReadLine();
+        string palavra2 = Console.ReadLine();
+        string palavra3 = Console.ReadLine();
+
+        if (palavra1 == "vertebrado")
+        {
+            if (palavra2 == "ave")
+            {
+                if (palavra3 == "carnivoro")
+                    Console.WriteLine("aguia");
+                else if (palavra3 == "onivoro")
+                    Console.WriteLine("pomba");
+            }
+            else if (palavra2 == "mamifero")
+            {
+                if (palavra3 == "onivoro")
+                    Console.WriteLine("homem");
+                else if (palavra3 == "herbivoro")
+                    Console.WriteLine("vaca");
+            }
+        }
+        else if (palavra1 == "invertebrado")
+        {
+            if (palavra2 == "inseto")
+            {
+                if (palavra3 == "hematofago")
+                    Console.WriteLine("pulga");
+                else if (palavra3 == "herbivoro")
+                    Console.WriteLine("lagarta");
+            }
+            else if (palavra2 == "anelideo")
+            {
+                if (palavra3 == "hematofago")
+                    Console.WriteLine("sanguessuga");
+                else if (palavra3 == "onivoro")
+                    Console.WriteLine("minhoca");
+            }
+        }
+        */
 
         // BEE 1050 ==============================================================================================
 
