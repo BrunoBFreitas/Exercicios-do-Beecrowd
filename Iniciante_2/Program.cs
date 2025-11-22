@@ -321,13 +321,54 @@ public class Iniciante_2
                     Console.WriteLine("minhoca");
             }
         }
-        */
 
         // BEE 1050 ==============================================================================================
+        int DDD = int.Parse(Console.ReadLine());
+
+        switch (DDD)
+        {
+            case 61: Console.WriteLine("Brasilia"); break;
+            case 71: Console.WriteLine("Salvador"); break;
+            case 11: Console.WriteLine("Sao Paulo"); break;
+            case 21: Console.WriteLine("Rio de Janeiro"); break;
+            case 32: Console.WriteLine("Juiz de Fora"); break;
+            case 19: Console.WriteLine("Campinas"); break;
+            case 27: Console.WriteLine("Vitoria"); break;
+            case 31: Console.WriteLine("Belo Horizonte"); break;
+            default: Console.WriteLine("DDD nao cadastrado"); break;
+        }
 
         // BEE 1051 ==============================================================================================
+        double salario = double.Parse(Console.ReadLine());
+
+        if (salario <= 2000.00)
+            Console.WriteLine("Isento");
+        else if (salario <= 3000.00)
+            Console.WriteLine($"R$ {(salario - 2000) * 0.08:F2}");
+        else if (salario <= 4500.00)
+            Console.WriteLine($"R$ {(salario - 3000) * 0.18 + 1000 * 0.08:f2}");
+        else
+            Console.WriteLine($"R$ {(salario - 4500) * 0.28 + 1500 * 0.18 + 1000 * 0.08:F2}");
 
         // BEE 1052 ==============================================================================================
+        int mes = int.Parse(Console.ReadLine());
+
+        switch (mes)
+        {
+            case 1: Console.WriteLine("January"); break;
+            case 2: Console.WriteLine("February"); break;
+            case 3: Console.WriteLine("March"); break;
+            case 4: Console.WriteLine("April"); break;
+            case 5: Console.WriteLine("May"); break;
+            case 6: Console.WriteLine("June"); break;
+            case 7: Console.WriteLine("July"); break;
+            case 8: Console.WriteLine("August"); break;
+            case 9: Console.WriteLine("September"); break;
+            case 10: Console.WriteLine("October"); break;
+            case 11: Console.WriteLine("November"); break;
+            case 12: Console.WriteLine("December"); break;
+        }
+        */
 
         // BEE 1059 ==============================================================================================
 
