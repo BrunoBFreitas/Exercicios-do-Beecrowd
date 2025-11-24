@@ -1,0 +1,15 @@
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\obj\Debug\net9.0\Iniciante_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\obj\Debug\net9.0\Iniciante_3.AssemblyInfoInputs.cache
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\obj\Debug\net9.0\Iniciante_3.AssemblyInfo.cs
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\obj\Debug\net9.0\Iniciante_3.csproj.CoreCompileInputs.cache
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\obj\Debug\net9.0\Iniciante_3.sourcelink.json
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\bin\Debug\net9.0\Iniciante_3.exe
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\bin\Debug\net9.0\Iniciante_3.deps.json
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\bin\Debug\net9.0\Iniciante_3.runtimeconfig.json
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\bin\Debug\net9.0\Iniciante_3.dll
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\bin\Debug\net9.0\Iniciante_3.pdb
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\obj\Debug\net9.0\Iniciante_3.dll
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\obj\Debug\net9.0\refint\Iniciante_3.dll
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\obj\Debug\net9.0\Iniciante_3.pdb
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\obj\Debug\net9.0\Iniciante_3.genruntimeconfig.cache
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Iniciante_3\obj\Debug\net9.0\ref\Iniciante_3.dll
