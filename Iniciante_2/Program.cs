@@ -168,101 +168,27 @@ public class Iniciante_2
         int ini = int.Parse(entrada[0]);
         int fim = int.Parse(entrada[1]);
 
-        if (fim == ini)
-            Console.WriteLine($"O JOGO DUROU 24 HORA(S)");
-        else
-            Console.WriteLine($"O JOGO DUROU {(fim < ini ? 24 : 0) + fim - ini} HORA(S)");
+        Console.WriteLine($"O JOGO DUROU {(ini < fim ? fim - ini : 24 + fim - ini)} HORA(S)");
 
-        // BEE 1047 ERRO==============================================================================================
-        //************************************************************************************************************
-        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // BEE 1047 ==============================================================================================
         string[] entrada = Console.ReadLine().Split(' ');
-        int horaIni = int.Parse(entrada[0]);
+        int horIni = int.Parse(entrada[0]);
         int minIni = int.Parse(entrada[1]);
 
-        int horaFim = int.Parse(entrada[2]);
+        int horFim = int.Parse(entrada[2]);
         int minFim = int.Parse(entrada[3]);
 
+        // Calcula as "posições" temporais em minutos
+        int tempoInicial = horIni * 60 + minIni;
+        int tempoFinal = horFim * 60 + minFim;
 
-        // h_ini < h_fim => fim - ini
-        // h_ini > h_fim => 24 - ini + fim
-        // h_ini = h_fim && m_ini = m_fim => 24
-        // m_ini < m_fim => fim - ini
-        // m_ini > m_fim => 60 - ini + fim
-        // m_ini = m_fim => 0
+        // Calcula a distância temporal em minutos
+        int tempo = tempoInicial < tempoFinal ? tempoFinal - tempoInicial : 24 * 60 + tempoFinal - tempoInicial;
 
-        int horas = 0;
-        int minutos = 0;
-
-        if (horaIni < horaFim)
-            horas = horaFim - horaIni;
-        else if (horaIni > horaFim)
-            horas = 24 - horaIni + horaFim;
-        else if (horaFim == horaIni && minFim == minIni)
-            horas = 24;
-
-        if (minIni < minFim)
-            minutos = minFim - minIni;
-        else if (minIni > minFim)
-        {
-            minutos = 60 - minIni + minFim;
-            horas--;
-        }
-        else
-            minutos = 0; 
-
-
-        if (horaIni < horaFim)
-        {
-            horas = horaFim - horaIni;
-            if (minIni < minFim)
-            {
-                minutos = minFim - minIni;
-            }
-            else if (minIni > minFim)
-            {
-                horas--;
-                minutos = 60 - minFim + minIni;
-            }
-            else
-            {
-
-            }
-        }
-        else if (horaIni > horaFim)
-        {
-            if (minIni < minFim)
-            {
-
-            }
-            else if (minIni > minFim)
-            {
-
-            }
-            else
-            {
-
-            }
-        }
-        else
-        {
-            if (minIni < minFim)
-            {
-
-            }
-            else if (minIni > minFim)
-            {
-
-            }
-            else
-            {
-
-            }
-        }
-
-
-        Console.WriteLine($"O JOGO DUROU {horas} HORA(S) E {minutos} MINUTO(S)");
-
+        Console.Write($"O JOGO DUROU {tempo / 60} HORA(S) E ");
+        tempo %= 60;
+        Console.WriteLine($"{tempo} MINUTO(S)");
+        
         // BEE 1048 ==============================================================================================
         double salario = double.Parse(Console.ReadLine());
         double reajuste;
@@ -368,30 +294,156 @@ public class Iniciante_2
             case 11: Console.WriteLine("November"); break;
             case 12: Console.WriteLine("December"); break;
         }
-        */
 
         // BEE 1059 ==============================================================================================
+        for(int i = 2; i <= 100; i+=2)
+            Console.WriteLine(i);
 
         // BEE 1060 ==============================================================================================
+        double[] numeros = new double[6];
+        for(int i = 0; i < 6; i++)
+            numeros[i] = double.Parse(Console.ReadLine());
+        
+        int contador = 0;
+        for(int i = 0; i < 6; i++)
+            if(numeros[i] > 0)
+                contador++;
+        
+        Console.WriteLine(contador + " valores positivos");
 
         // BEE 1061 ==============================================================================================
+        string[] entrada;
+        int tempoIni;
+        int tempoFim;
+
+        int segNoDia = 24 * 60 * 60;   // Segundos em um único dia
+
+        // Calcula as "posições" temporais em segundos
+        entrada = Console.ReadLine().Split(' ');
+        tempoIni = int.Parse(entrada[1]) * segNoDia;
+        entrada = Console.ReadLine().Split(' ');
+        tempoIni += int.Parse(entrada[0]) * 60 * 60 + int.Parse(entrada[2]) * 60 + int.Parse(entrada[4]);
+
+        entrada = Console.ReadLine().Split(' ');
+        tempoFim = int.Parse(entrada[1]) * segNoDia;
+        entrada = Console.ReadLine().Split(' ');
+        tempoFim += int.Parse(entrada[0]) * 60 * 60 + int.Parse(entrada[2]) * 60 + int.Parse(entrada[4]);
+
+        // Calcula a distância temporal em segundos
+        int tempo = tempoIni < tempoFim ? tempoFim - tempoIni : 30 * segNoDia + tempoFim - tempoIni;
+
+        Console.WriteLine($"{tempo / segNoDia} dia(s)"); tempo %= segNoDia;
+        Console.WriteLine($"{tempo / (60 * 60)} hora(s)"); tempo %= 60 * 60;
+        Console.WriteLine($"{tempo / 60} minuto(s)"); tempo %= 60;
+        Console.WriteLine($"{tempo} segundo(s)");
 
         // BEE 1064 ==============================================================================================
+        double[] numeros = new double[6];
+        for(int i = 0; i < 6; i++)
+            numeros[i] = double.Parse(Console.ReadLine());
+        
+        int contador = 0;
+        double soma = 0;
+        foreach(double numero in numeros)
+        {
+            if (numero > 0)
+            {
+                contador++;
+                soma += numero;
+            }
+        }
+
+        Console.WriteLine($"{contador} valores positivos\n{soma/contador :F1}");
 
         // BEE 1065 ==============================================================================================
+        int[] numeros = new int[5];
+        for(int i = 0; i < 5; i++)
+            numeros[i] = int.Parse(Console.ReadLine());
+        
+        int contador = 0;
+        foreach(int numero in numeros)
+        {
+            if(numero % 2 == 0)
+                contador++;
+        }
+
+        Console.WriteLine($"{contador} valores pares");
 
         // BEE 1066 ==============================================================================================
+        int[] numeros = new int[5];
+        for (int i = 0; i < 5; i++)
+            numeros[i] = int.Parse(Console.ReadLine());
+
+        int pares = 0;
+        int impares = 0;
+        int positivos = 0;
+        int negativos = 0;
+
+        foreach (int numero in numeros)
+        {
+            if (numero % 2 == 0)
+                pares++;
+            else
+                impares++;
+
+            if (numero > 0)
+                positivos++;
+            else if (numero < 0)
+                negativos++;
+        }
+
+        Console.WriteLine($"{pares} valor(es) par(es)");
+        Console.WriteLine($"{impares} valor(es) impar(es)");
+        Console.WriteLine($"{positivos} valor(es) positivo(s)");
+        Console.WriteLine($"{negativos} valor(es) negativo(s)");
 
         // BEE 1067 ==============================================================================================
+        int valor = int.Parse(Console.ReadLine());
+        for (int i = 1; i <= valor; i += 2)
+            Console.WriteLine(i);
 
         // BEE 1070 ==============================================================================================
+        int valor = int.Parse(Console.ReadLine());
+        if (valor % 2 == 0) valor++;
+
+        for (int i = 6; i > 0; i--)
+        {
+            Console.WriteLine(valor);
+            valor += 2;
+        }
 
         // BEE 1071 ==============================================================================================
+        int x = int.Parse(Console.ReadLine());
+        int y = int.Parse(Console.ReadLine());
+
+        int soma = 0;
+        for (int i = Math.Min(x, y) + 1; i < Math.Max(x, y); i++)
+            if (i % 2 != 0)
+                soma += i;
+
+        Console.WriteLine(soma);
 
         // BEE 1072 ==============================================================================================
+        int N = int.Parse(Console.ReadLine());
+        int contador = 0;
+        int valor;
+
+        for (int i = 0; i < N; i++)
+        {
+            valor = int.Parse(Console.ReadLine());
+            if (valor >= 10 && valor <= 20)
+                contador++;
+        }
+
+        Console.WriteLine($"{contador} in");
+        Console.WriteLine($"{N - contador} out");
 
         // BEE 1073 ==============================================================================================
+        int valor = int.Parse(Console.ReadLine());
 
+        for (int i = 2; i <= valor; i += 2)
+            Console.WriteLine($"{i}^2 = {i * i}");
+        */
 
 
 
