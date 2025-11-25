@@ -117,12 +117,16 @@ class Program
             for (int j = 7 + i - 1; j >= i + 4; j--)
                 Console.WriteLine($"I={i} J={j}");
 
-        // BEE 1098 ERRO ==============================================================================================
-        //*************************************************************************************************************
-        for (double i = 0.0; i <= 2; i += 0.2)
+        // BEE 1098 ==============================================================================================
+        for (decimal i = 0.0m; i <= 2; i += 0.2m)
+        {
             for (int j = 1; j <= 3; j++)
-                Console.WriteLine(i == 0 || i == 1 || i == 2 ? $"I={i} J={j}" : $"I={i:F1} J={j + i:F1}");
-
+            {
+                Console.Write(i == (int)i ? $"I={i:F0} " : $"I={i:F1} ");
+                Console.WriteLine(j + i == (int)(j + i) ? $"J={j + i:F0}" : $"J={j + i:F1}");
+            }
+        }
+        
         // BEE 1099 ==============================================================================================
         int N = int.Parse(Console.ReadLine());
         int[] somas = new int[N];
@@ -140,7 +144,7 @@ class Program
                 if (j % 2 != 0) somas[i] += j;
         }
 
-        foreach(int soma in somas)
+        foreach (int soma in somas)
             Console.WriteLine(soma);
 
         // BEE 1101 ==============================================================================================
@@ -172,33 +176,158 @@ class Program
 
             Console.WriteLine(X > Y ? "Decrescente" : "Crescente");
         }
-        */
 
         // BEE 1114 ==============================================================================================
+        while (true)
+        {
+            if (int.Parse(Console.ReadLine()) == 2002)
+            {
+                Console.WriteLine("Acesso Permitido");
+                break;
+            }
+
+            Console.WriteLine("Senha Invalida");
+        }
 
         // BEE 1115 ==============================================================================================
+        while (true)
+        {
+            string[] coordenadas = Console.ReadLine().Split(' ');
+            int X = int.Parse(coordenadas[0]);
+            int Y = int.Parse(coordenadas[1]);
+
+            if (X == 0 || Y == 0) break;
+
+            if (X > 0)
+            {
+                if (Y > 0)
+                    Console.WriteLine("primeiro");
+                else
+                    Console.WriteLine("quarto");
+            }
+            else
+            {
+                if (Y > 0)
+                    Console.WriteLine("segundo");
+                else
+                    Console.WriteLine("terceiro");
+            }
+        }
 
         // BEE 1116 ==============================================================================================
+        for (int N = int.Parse(Console.ReadLine()); N > 0; N--)
+        {
+            string[] valores = Console.ReadLine().Split(' ');
+            int X = int.Parse(valores[0]);
+            int Y = int.Parse(valores[1]);
+
+            if (Y != 0)
+                Console.WriteLine($"{(double)X / Y:F1}");
+            else
+                Console.WriteLine("divisao impossivel");
+        }
 
         // BEE 1117 ==============================================================================================
 
+        double total = 0;
+        for (int i = 0; i < 2; i++)
+        {
+            double nota = double.Parse(Console.ReadLine());
+            if (nota >= 0 && nota <= 10)
+                total += nota;
+            else
+            {
+                Console.WriteLine("nota invalida");
+                i--;
+            }
+        }
+
+        Console.WriteLine($"media = {total / 2:F2}");
+
         // BEE 1118 ==============================================================================================
+        int decisao;
+
+        do
+        {
+            double total = 0;
+            for (int i = 0; i < 2; i++)
+            {
+                double nota = double.Parse(Console.ReadLine());
+                if (nota >= 0 && nota <= 10)
+                    total += nota;
+                else
+                {
+                    Console.WriteLine("nota invalida");
+                    i--;
+                }
+            }
+            Console.WriteLine($"media = {total / 2:F2}");
+
+            do
+            {
+                Console.WriteLine("novo calculo (1-sim 2-nao)");
+                decisao = int.Parse(Console.ReadLine());
+            } while (decisao < 1 || decisao > 2);
+
+        } while (decisao == 1);
 
         // BEE 1131 ==============================================================================================
+        int decisao;
+        int vitoriaInter = 0;
+        int vitoriaGremio = 0;
+        int empate = 0;
+
+        do
+        {
+            string[] placar = Console.ReadLine().Split(' ');
+            if (int.Parse(placar[0]) > int.Parse(placar[1]))
+                vitoriaInter++;
+            else if (int.Parse(placar[1]) > int.Parse(placar[0]))
+                vitoriaGremio++;
+            else
+                empate++;
+
+            do
+            {
+                Console.WriteLine("Novo grenal (1-sim 2-nao)");
+                decisao = int.Parse(Console.ReadLine());
+            } while (decisao < 1 || decisao > 2);
+        } while (decisao == 1);
+
+        Console.WriteLine($"{vitoriaInter + vitoriaGremio + empate} grenais");
+        Console.WriteLine($"Inter:{vitoriaInter}");
+        Console.WriteLine($"Gremio:{vitoriaGremio}");
+        Console.WriteLine($"Empates:{empate}");
+
+        if (vitoriaInter > vitoriaGremio)
+            Console.WriteLine("Inter venceu mais");
+        else if (vitoriaGremio > vitoriaInter)
+            Console.WriteLine("Gremio venceu mais");
+        else
+            Console.WriteLine("Nao houve vencedor");
 
         // BEE 1132 ==============================================================================================
+        int X = int.Parse(Console.ReadLine());
+        int Y = int.Parse(Console.ReadLine());
 
-        // BEE 1133 ==============================================================================================
+        int soma = 0;
+        for (int i = Math.Min(X, Y); i <= Math.Max(X, Y); i++)
+            if (i % 13 != 0) soma += i;
 
-        // BEE 1134 ==============================================================================================
+        Console.WriteLine(soma);
+        */
 
-        // BEE 1142 ==============================================================================================
+// BEE 1133 ==============================================================================================
 
-        // BEE 1143 ==============================================================================================
+// BEE 1134 ==============================================================================================
 
-        // BEE 1044 ==============================================================================================
+// BEE 1142 ==============================================================================================
+
+// BEE 1143 ==============================================================================================
+
+// BEE 1044 ==============================================================================================
 
 
-        Console.WriteLine("\nPress ENTER to exit:"); Console.ReadLine(); Console.Clear();
+Console.WriteLine("\nPress ENTER to exit:"); Console.ReadLine(); Console.Clear();
     }
 }
