@@ -1,0 +1,15 @@
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\bin\Debug\net9.0\Ad_Hoc.exe
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\bin\Debug\net9.0\Ad_Hoc.deps.json
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\bin\Debug\net9.0\Ad_Hoc.runtimeconfig.json
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\bin\Debug\net9.0\Ad_Hoc.dll
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\bin\Debug\net9.0\Ad_Hoc.pdb
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\obj\Debug\net9.0\Ad_Hoc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\obj\Debug\net9.0\Ad_Hoc.AssemblyInfoInputs.cache
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\obj\Debug\net9.0\Ad_Hoc.AssemblyInfo.cs
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\obj\Debug\net9.0\Ad_Hoc.csproj.CoreCompileInputs.cache
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\obj\Debug\net9.0\Ad_Hoc.sourcelink.json
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\obj\Debug\net9.0\Ad_Hoc.dll
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\obj\Debug\net9.0\refint\Ad_Hoc.dll
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\obj\Debug\net9.0\Ad_Hoc.pdb
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\obj\Debug\net9.0\Ad_Hoc.genruntimeconfig.cache
+C:\Users\Bruno\tecno\.NET_CSharpProjects\beecrowd\Ad_Hoc\obj\Debug\net9.0\ref\Ad_Hoc.dll
